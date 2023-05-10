@@ -1,0 +1,122 @@
+/* ------------------------------------------------------------ *\
+	Header
+\* ------------------------------------------------------------ */
+
+.header {
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	padding: 22px 0;
+	width: $header-width; 
+	height: 100%; 
+	background-color: #2b343f; 
+	color: #fff;
+	font-weight: 700; 
+	font-size: 18px; 
+	transition: $tsi;
+	z-index: 10; 
+
+	@include breakpoint-down(small-desktop) {
+		padding-top: 40px; 
+		padding-bottom: 100px;
+		padding-right: 10px; 
+		transform: translateX(calc(-100% + 60px)); 
+		width: $header-width + 10px; 
+		background-color: transparent;
+		font-size: 16px; 
+		pointer-events: none;
+	}
+
+	.header__logo {
+		margin-left: auto; 
+		margin-right: auto; 
+		padding-bottom: 28px; 
+		max-width: 106px; 
+		transition: $tsi;
+
+		@include breakpoint-down(small-desktop) {
+			transform: translateX(-100px); 
+			max-width: 80px; 
+			opacity: 0; 
+			pointer-events: none;
+			visibility: hidden; 
+			transition: $tsi;
+		}
+	}
+
+	.header__btn {
+		position: absolute; 
+		top: 20px; 
+		right: 0; 
+		transform: translate(0); 
+		padding: 12px 10px;
+		display: none; 
+		background-color: #2b343f; 
+		pointer-events: auto;
+		border-radius: 0 10px 10px 0;
+		transition: $tsi;
+		opacity: .75; 
+
+		@include breakpoint-down(small-desktop) {
+			display: block; 
+		}
+	}
+
+	.header__btn:before {
+		content: '';
+		position: absolute; 
+		top: 0; 
+		left: -100vw;
+		right: 100%; 
+		margin-right: -2px; 
+		background-color: inherit;
+		height: 100vh; 
+		max-height: 42px; 
+		pointer-events: none;
+		transition: max-height .3s ease-out, transform .3s ease-out;
+	}
+
+	.header__nav {
+		@include breakpoint-down(small-desktop) {
+			transform: translateX(-100px); 
+			opacity: 0; 
+			pointer-events: none;
+			visibility: hidden; 
+			transition: $tsi;
+		}
+	}
+}
+
+/*  active state  */
+.header.is-active {
+	transform: translateX(0); 
+	pointer-events: auto;
+
+	.header__btn {
+		transform: translate(0, -20px); 
+		opacity: 1; 
+	}
+
+	.header__btn:before {
+		border-radius: 0;
+		max-height: 100vh; 
+		transform: translateX(52px); 
+		transition: max-height .5s ease-out, transform .5s ease-out;
+	}
+
+	.header__nav {
+		transform: translateX(0); 
+		opacity: 1; 
+		pointer-events: auto;
+		visibility: visible; 
+		transition-delay: .3s;
+	}
+
+	.header__logo,
+	.header__nav {
+		transform: translateX(0); 
+		opacity: 1; 
+		pointer-events: auto;
+		visibility: visible; 
+	}
+ }

@@ -1,0 +1,57 @@
+//Variables
+$font-weight-base           : 400;
+$font-size-base             : 16px;
+$line-height-base           : 1.2;
+
+$ff-sans-serif              : 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$ff-serif                   : Georgia, "Times New Roman", Times, serif;
+$ff-lato 										: 'Lato', sans-serif;
+
+$tsi: transform 0.3s ease-out, border-color .3s ease-out, border-radius .3s ease-out, max-height .3s ease-out, max-width .3s ease-out, background-color .3s ease-out, box-shadow .3s ease-out, color 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+
+$shell-max-width            : 1548px;
+$shell-gutter               : 15px;
+
+$header-width               : 200px;
+
+$grid-spacer                : 12px;
+
+$c-black                    : #000;
+$c-white                    : #fff;
+
+$c-dark                     : #333333;
+$c-gray                     : #9A9A9A;
+$c-light                    : #E3E3E3;
+
+$c-blue                     : #1A85C2;
+$c-violet                   : #89499C;
+$c-brown                    : #F06147;
+$c-orange                   : #F99D1C;
+$c-green                    : #72B444;
+$c-mint                     : #D9EAC1;
+$c-beige                    : #FFE4BF;
+$c-pink                     : #F7D7D1;
+
+/*  Theme variables  */
+$color-highlight-color      : $c-blue;
+
+$color-box-head-color       : $c-blue;
+$color-box-head-background  : #D9EAF2;
+
+$color-accent-color-1       : $c-blue;
+$color-accent-color-2       : $c-orange;
+
+$ff-box-font                : $ff-lato;
+
+/*  Responsive variables  */
+$responsive-ios             : 812px;
+
+$breakpoints: (
+	mobile-small: 374px,
+	mobile-medium: 575px,
+	mobile: 767px,
+	admin-bar: 782px,
+	tablet: 1023px,
+	small-desktop: 1199px,
+	large-desktop: 1399px
+);

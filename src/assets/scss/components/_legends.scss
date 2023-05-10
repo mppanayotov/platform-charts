@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+	legends
+\* ------------------------------------------------------------ */
+
+.legends {
+	width: 100%; 
+	max-width: 450px; 
+	display: flex; 
+	justify-content: space-between;
+
+	.legend {
+		padding-right: 14px; 
+		border-right: 1px solid #E2E2E2;
+		flex: 0 1 135px;
+
+		@include breakpoint-down(mobile) {
+			padding-right: 0; 
+			border-right: 0;
+		}
+	}
+
+	.legend + .legend {
+		margin-left: 20px; 
+	}
+}

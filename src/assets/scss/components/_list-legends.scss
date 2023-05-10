@@ -1,0 +1,69 @@
+/* ------------------------------------------------------------ *\
+	list-legend
+\* ------------------------------------------------------------ */
+
+.list-legend {
+	margin: -10px; 
+	padding-top: 28px; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style-type: none;
+	font-size: 18px; 
+	font-weight: 400; 
+
+	@include breakpoint-down(small-desktop) {
+		font-size: 16px; 
+	}
+
+	@include breakpoint-down(mobile) {
+		font-size: 14px; 
+	}
+
+	li {
+		padding: 10px; 
+		flex: 0 0 auto;
+		display: flex; 
+		align-items: center;
+	}
+
+	i {
+		width: 16px; 
+		height: 16px; 
+		margin-right: 10px; 
+		border-radius: 100%;
+		background-color: currentColor;
+	}
+
+	del {
+		position: relative; 
+		margin-left: 8px;
+		margin-right: 18px; 
+		border-radius: 100%;
+		width: 10px; 
+		height: 10px; 
+		background-color: currentColor;
+	}
+
+	del:before {
+		content: '';
+		position: absolute; 
+		top: 50%; 
+		left: -8px; 
+		right: -8px; 
+		transform: translateY(-50%); 
+		height: 2px; 
+		background-color: currentColor;
+	}
+
+	strong {
+		margin-right: 10px; 
+		width: 15px; 
+		height: 5px; 
+		background-color: currentColor;
+	}
+
+	span {
+		color: $c-dark;
+	}
+}

@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------ *\
+	legend
+\* ------------------------------------------------------------ */
+
+.legend {
+	display: flex; 
+	justify-content: space-between;
+	flex-wrap: wrap;
+	font-size: 16px; 
+
+	@include breakpoint-down(mobile) {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: flex-start;
+		font-size: 14px; 
+	}
+
+	p {
+		padding-top: 6px; 
+		flex: 0 0 100%;
+		color: $c-dark;
+	}
+
+	.legend__value {
+		flex: 0 0 auto;
+		font-size: 23px; 
+		font-weight: 600; 
+
+		@include breakpoint-down(small-desktop) {
+			font-size: 16px; 
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: 14px; 
+		}
+	}
+
+	.legend__icon {
+		width: 23px; 
+		max-width: 23px; 
+		flex: 0 0 23px;
+
+		@include breakpoint-down(mobile) {
+			order: -99;
+		}
+	}
+}

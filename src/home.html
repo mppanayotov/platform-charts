@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+	<include src="head.html"></include>
+<body>
+	<div class="wrapper">
+		<include src="header.html"></include>
+
+		<div class="main">
+			<div class="main__placeholder-bar"></div><!-- /.main__placeholder-bar -->
+			
+			<div class="main__content">
+				<div class="shell">
+					<div class="main__head">
+						<include src="filters.html"></include>
+						
+						<include src="filters-nav.html"></include>
+					</div><!-- /.main__head -->
+
+					<div class="isotope js-isotope">
+						<div class="isotope__item isotope__item--xl js-isotope-item js-filter-client">
+							<include src="box-stats-donut.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--md js-isotope-item js-filter-client">
+							<include src="box-stats.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--xl js-isotope-item js-filter-client js-filter-recruit">
+							<include src="box-stats-donut.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--md js-isotope-item js-filter-client js-filter-recruit">
+							<include src="box-stats.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--sm js-isotope-item js-filter-recruit js-filter-operations">
+							<include src="box-donuts.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--sm js-isotope-item js-filter-client js-filter-recruit">
+							<include src="box-bars-labels.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--sm js-isotope-item js-filter-recruit js-filter-operations">
+							<include src="box-bars.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--lg js-isotope-item js-filter-sales">
+							<include src="box-bars-labels-badges.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--lg js-isotope-item js-filter-finance">
+							<include src="box-stats-graph.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--xs js-isotope-item js-filter-sales">
+							<include src="box-stats-vertical.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--xs js-isotope-item">
+							<include src="box-bars-alt.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--xs js-isotope-item js-filter-sales">
+							<include src="box-stats-vertical-sm.html"></include>
+						</div><!-- /.isotope__item -->
+
+						<div class="isotope__item isotope__item--xs js-isotope-item">
+							<include src="box-stats-sm.html"></include>
+						</div><!-- /.isotope__item -->
+					</div><!-- /.grid -->
+				</div><!-- /.shell -->
+			</div><!-- /.main__content -->
+		</div><!-- /.main -->
+
+		<include src="footer.html"></include>
+	</div><!-- /.wrapper -->
+
+	<script type="text/javascript">
+		let theme = {
+			"colorHighlightColor": "#1A85C2",
+			"colorBoxHeadColor": "#1A85C2",
+			"colorBoxHeadBackground": "#D9EAF2",
+			"colorAccentColor1": "#1A85C2",
+			"colorAccentColor2": "#F99D1C",
+			"ffBoxFont": "'Lato'",
+			"ffBoxFontType": "sans-serif"
+		};
+
+		let boxes = {
+			"box-1": {
+				"title": "Box title",
+				"subtitle": "Box subtitle",
+				"stats": [
+					{
+						"statValue": "1.1",
+						"statDeltaValue": "1.11",
+						"statDeltaDown": false
+					}
+				],
+				"donuts": [
+					{
+						"data": [ "49%", "28%", "23%" ],
+						"promoters": [ "100", "110", "120" ],
+						"chartValue": "8.8",
+						"chartDeltaValue": "6.6",
+						"chartDeltaDown": false
+					}
+				]
+			},
+			"box-2": {
+				"title": "Box title",
+				"subtitle": "Box subtitle",
+				"stats": [
+					{
+						"statValue": "1.1",
+						"statDeltaValue": "1.11",
+						"statDeltaDown": false
+					},
+					{
+						"statValue": "2.2",
+						"statDeltaValue": "2.22",
+						"statDeltaDown": true
+					}
+				]
+			},
+			"box-3": {
+				"title": "Box title",
+				"subtitle": "Box subtitle",
+				"donutsAlt": [
+					{
+						"data": "49%",
+						"chartDeltaValue": "8.8",
+						"chartDeltaDown": false
+					},
+					{
+						"data": "69%",
+						"chartDeltaValue": "9.9",
+						"chartDeltaDown": true
+					}
+				]
+			},
+			"box-4": {
+				"title": "Box title",
+				"subtitle": "Box subtitle",
+				"stats": [
+					{
+						"statValue": "1.1",
+						"statDeltaValue": "1.11",
+						"statDeltaDown": false
+					},
+					{
+						"statValue": "2.2",
+						"statDeltaValue": "2.22",
+						"statDeltaDown": true
+					}
+				],
+				"graphs": [
+					{
+						"datasets": [
+							[50, 52, 51, 40, 50, 70, 40],
+							[51, 51, 51, 52, 51, 51, 52]
+						]
+					}
+				]
+			},
+			"box-5": {
+				"title": "Box title",
+				"subtitle": "Box subtitle",
+				"stats": [
+					{
+						"statValue": "1.1",
+						"statDeltaValue": "1.11",
+						"statDeltaDown": false
+					},
+					{
+						"statValue": "2.2",
+						"statDeltaValue": "2.22",
+						"statDeltaDown": true
+					},
+					{
+						"statValue": "3.3",
+						"statDeltaValue": "3.33",
+						"statDeltaDown": false
+					},
+					{
+						"statValue": "4.4",
+						"statDeltaValue": "4.44",
+						"statDeltaDown": true
+					}
+				]
+			},
+			"box-6": {
+				"title": "Box title",
+				"subtitle": "Box subtitle",
+				"bars": [
+					{
+						"title": "Bars title 1",
+						"datasets": ["49%", "79%"]
+					},
+					{
+						"title": "Bars title 2",
+						"datasets": ["49%", "79%"]
+					}
+				]
+			},
+			"box-7": {
+				"title": "Box title",
+				"subtitle": "Box subtitle",
+				"title": "Box title",
+				"subtitle": "Box subtitle",
+				"bars": [
+					{
+						"labels": [
+							"0 - 40 days"
+						],
+						"datasets": ["49%", "79%"]
+					},
+					{
+						"labels": [
+							"0 - 60 days"
+						],
+						"datasets": ["32%", "55%"]
+					},
+					{
+						"labels": [
+							"0 - 90 days"
+						],
+						"datasets": ["89%", "99%"]
+					}
+				]
+			},
+			"box-8": {
+				"title": "Box title",
+				"subtitle": "Box subtitle",
+				"bars": [
+					{
+						"labels": [
+							"Label 1",
+							"Label 2",
+							"Label 3"
+						],
+						"datasets": ["49%", "79%", "67%"],
+						"datasetsAlt": [
+							"1123",
+							"1123",
+							"1123"
+						]
+					},
+					{
+						"labels": [
+							"Label 1",
+							"Label 2",
+							"Label 3"
+						],
+						"datasets": ["32%", "55%", "72%"],
+						"datasetsAlt": [
+							"2123",
+							"2123",
+							"2123"
+						]
+					}
+				]
+			}
+		};
+	</script>
+
+	<include src="scripts.html"></include>
+</body>
+</html>
+ 

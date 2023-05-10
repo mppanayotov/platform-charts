@@ -1,0 +1,136 @@
+/* ------------------------------------------------------------ *\
+	box
+\* ------------------------------------------------------------ */
+
+.box {
+	width: 100%; 
+	display: flex; 
+	flex-direction: column;
+	font-size: 18px; 
+	text-align: center; 
+
+	h2 {
+		margin-bottom: 0; 
+		padding: 8px 16px; 
+		font-size: 16px; 
+		text-transform: uppercase; 
+		font-weight: 700; 
+	}
+
+	h3 {
+		margin-bottom: 0; 
+		padding: 35px 0 29px; 
+		font-size: inherit; 
+		font-weight: 900; 
+
+		@include breakpoint-down(tablet) {
+			padding: 16px 0 12px;
+		}
+	}
+
+	h3:first-of-type {
+		padding-top: 0; 
+	}
+
+	h4 {
+		margin-bottom: 0; 
+		padding: 3px 16px 8px 0;
+		font-weight: 400; 
+		font-size: inherit; 
+		text-align: right; 
+
+		@include breakpoint-down(mobile) {
+			padding: 8px; 
+			text-align: center; 
+		}
+	}
+
+	h5 {
+		margin-bottom: 0; 
+		padding: 30px 0 12px;
+		font-weight: 400; 
+		font-size: inherit; 
+	}
+
+	h5:first-of-type {
+		padding-top: 0; 
+	}
+
+	h6 {
+		margin-bottom: 0; 
+		font-size: 11px; 
+		font-weight: 400; 
+		color: $c-dark;
+	}
+
+	.box__head {
+		border-radius: 5px 5px 0 0;
+		flex: 0 0 auto;
+	}
+
+	.box__content {
+		padding: 24px; 
+		border-radius: 0 0 5px 5px;
+		background-color: #fff; 
+		flex: 1 1 auto;
+	}
+
+	.box__bars + .box__bars {
+		padding-top: 35px; 
+
+		@include breakpoint-down(tablet) {
+			padding-top: 16px; 
+		}
+	}
+
+	.box__bars--alt + .box__bars--alt {
+		padding-top: 0; 
+	}
+
+	.box__row {
+		display: flex; 
+		align-items: center;
+
+		@include breakpoint-down(mobile) {
+			display: block; 
+		}
+	}
+
+	.box__col {
+		flex: 1 1 100%;
+	}
+
+	.box__col--fixed {
+		flex: 0 0 auto;
+	}
+
+	.box__spacer {
+		height: 50px; 
+
+		@include breakpoint-down(tablet) {
+			height: 16px; 
+		}
+	}
+
+	.box__delta {
+		flex: 0 0 auto;
+		color: $c-green;
+		font-weight: 700; 
+	}
+
+	.box__delta svg {
+		margin-bottom: -6px; 
+		width: 11px; 
+		display: inline-block; 
+	}
+
+	.box__delta--down {
+		color: $c-brown;
+	}
+	
+	.box__delta--down svg {
+		margin-top: -14px; 
+		margin-bottom: 2px; 
+		transform: scaleY(-1); 
+	}
+}

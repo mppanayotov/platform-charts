@@ -1,0 +1,62 @@
+/* ------------------------------------------------------------ *\
+	filters-nav
+\* ------------------------------------------------------------ */
+
+.filters-nav {
+	padding: 28px 0;
+	font-size: 18px; 
+	font-weight: 700; 
+
+	@include breakpoint-down(small-desktop) {
+		font-size: 16px; 
+	}
+
+	@include breakpoint-down(mobile) {
+		font-size: 14px; 
+	}
+
+
+	ul {
+		border-radius: 5px;
+		background-color: #E8E9EA; 
+		display: flex; 
+		list-style-type: none;
+
+		@include breakpoint-down(tablet) {
+			flex-wrap: wrap;
+		}
+	}
+
+	li {
+		border-radius: 5px;
+		flex: 1 1 auto;
+		text-align: center; 
+		display: flex; 
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 50%;
+			max-width: 50%; 
+		}
+	}
+
+	button {
+		padding: 8px;
+		width: 100%; 
+		min-height: 55px; 
+		color: #4E4E4D;
+
+		@include breakpoint-down(tablet) {
+			min-height: 0; 
+		}
+	}
+
+	li:hover,
+	.is-active {
+		background-color: currentColor;
+	}
+
+	li:hover button,
+	.is-active button {
+		color: #fff;
+	}
+}

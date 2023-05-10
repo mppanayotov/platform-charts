@@ -1,0 +1,42 @@
+/* ------------------------------------------------------------ *\
+	filters
+\* ------------------------------------------------------------ */
+
+.filters {
+	display: flex; 
+	justify-content: space-between;
+	align-items: center;
+
+	@include breakpoint-down(tablet) {
+		display: block; 
+	}
+
+	.filters__head {
+		flex: 0 0 auto;
+
+		@include breakpoint-down(large-desktop) {
+			max-width: 200px; 
+		}
+
+		@include breakpoint-down(tablet) {
+			margin-left: auto;
+			margin-right: auto; 
+			padding-bottom: 20px; 
+		}
+	}
+
+	.filters__body {
+		margin: -10px; 
+		display: flex; 
+		flex: 0 1 auto;
+
+		@include breakpoint-down(tablet) {
+			flex-wrap: wrap;
+		}
+	}
+
+	.filters__legend {
+ 		padding: 10px;
+		padding-right: 20px; 
+	}  
+}

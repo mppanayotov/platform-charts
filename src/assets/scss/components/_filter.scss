@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------ *\
+	filter
+\* ------------------------------------------------------------ */
+
+.filter {
+	padding: 10px; 
+	flex: 0 0 auto;
+	display: flex; 
+	align-items: center;
+
+	@include breakpoint-down(mobile) {
+		font-size: 14px; 
+	}
+
+	.filter__title {
+		font-size: 18px; 
+		font-weight: 400; 
+
+		@include breakpoint-down(small-desktop) {
+			font-size: 16px; 
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: 14px; 
+		}
+	}
+
+	.filter__icon {
+		width: 18px; 
+		margin-right: 12px; 
+		font-size: 0; 
+	}
+
+	.filter__select {
+		margin-left: 10px; 
+	}
+}

@@ -1,0 +1,81 @@
+/* ------------------------------------------------------------ *\
+	btn-bars
+\* ------------------------------------------------------------ */
+
+.btn-bars {
+	position: relative;
+	border: none; 
+	border-radius: 3px;
+	width: 42px; 
+	max-width: 100%; 
+	height: 22px; 
+	display: block;
+	align-items: center;
+	text-align: center; 
+	line-height: 1; 
+	text-decoration: none; 
+	transform-style: preserve-3d; 
+	color: #fff; 
+
+	&:hover,
+	&:focus {
+		color: #fff; 
+	}
+
+	.btn__icon {
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+		width: 100%;
+		height: 100%;
+		flex: 0 0 auto;
+		order: 99;
+		transform-style: preserve-3d;
+	}
+
+	.btn__icon span {
+		position: absolute;
+		transform-origin: 0% 50%;
+		border-radius: 100px;
+		width: 100%;
+		height: 4px;
+		background: currentColor;
+		display: block;
+		transition: $tsi;
+	}
+
+	.btn__icon span:nth-child(1) {
+		top: 0;
+	}
+
+	.btn__icon span:nth-child(2) {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.btn__icon span:nth-child(3) {
+		top: auto;
+		bottom: 0; 
+	}
+}
+
+/*  active state  */
+.btn-bars.is-active {
+	.btn__icon {
+		transform: translate(calc(-50% + 8px), -50%);
+	}
+
+	.btn__icon span:nth-child(1) {
+		transform: translate(6px, -6px) rotate(45deg);
+	}
+
+	.btn__icon span:nth-child(2) {
+		opacity: 0; 
+		transform: translate(50%, -50%); 
+	}
+
+	.btn__icon span:nth-child(3) {
+		transform: translate(6px, 6px) rotate(-45deg);
+	}
+}
